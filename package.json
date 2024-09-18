@@ -9,7 +9,7 @@
   "homepage": "https://github.com/giggio/node-chromedriver",
   "repository": {
     "type": "git",
-    "url": "git://github.com/giggio/node-chromedriver.git"
+    "url": "git@github.com:kkeenan-tc/node-chromedriver.git"
   },
   "license": "Apache-2.0",
   "author": {
