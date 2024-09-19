@@ -279,7 +279,7 @@ jobs:
           node-version: 22.x
           registry-url: "https://npm.pkg.github.com"
       - run: |
-         npm config set registry https://npm.pkg.github.com
+         npm config set @kkeenan-tc:registry https://npm.pkg.github.com
          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
