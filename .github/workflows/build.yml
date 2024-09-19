@@ -281,6 +281,7 @@ jobs:
           node-version: 22.x
           registry-url: "https://npm.pkg.github.com"
           scope: '@kkeenan-tc'
+          always-auth: true
       - name: Install dependencies
         run: yarn
       - name: Publish package
