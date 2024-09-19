@@ -283,7 +283,7 @@ jobs:
           scope: '@kkeenan-tc'
           always-auth: true
       - name: Install dependencies
-        run: find ./ -iname "*.zip"
+        run: find ./
       # - name: Publish package
       #   run: yarn publish 
       #   env:
