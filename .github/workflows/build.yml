@@ -275,12 +275,9 @@ jobs:
     needs: [build]
     if: success()
     steps:
-    - name: Archive  results
-      if: success() || failure()
-      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
-      with:
-        name: reports
-        path: ./
+      - name: test
+        run: |
+         find /
       # - uses: actions/checkout@v4
       # - uses: actions/setup-node@v4
       #   with:
