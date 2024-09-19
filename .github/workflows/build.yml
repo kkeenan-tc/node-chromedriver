@@ -275,16 +275,22 @@ jobs:
     needs: [build]
     if: success()
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-          registry-url: "https://npm.pkg.github.com"
-          scope: '@kkeenan-tc'
-          always-auth: true
-      - name: Install dependencies
-        run: find ./
-      # - name: Publish package
-      #   run: yarn publish 
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Archive  results
+      if: success() || failure()
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+      with:
+        name: reports
+        path: ./
+      # - uses: actions/checkout@v4
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 22.x
+      #     registry-url: "https://npm.pkg.github.com"
+      #     scope: '@kkeenan-tc'
+      #     always-auth: true
+      # - name: Install dependencies
+      #   run: find ./
+      # # - name: Publish package
+      # #   run: yarn publish 
+      # #   env:
+      # #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
